@@ -2,7 +2,7 @@
 
 # TP 1 - Installation d’Ubuntu Server et prise en main du shell
 
-## Exercice 2. Prise en main de l'interpréteur de commandes
+## 2 - Prise en main de l'interpréteur de commandes
 
 ### Manuel
 
@@ -53,7 +53,7 @@ Cela nous envoie alors dans la section dpkg-maintscript-helper, qui nous indique
 11. Pour supprimer un dossier et son contenu directement, il faut utiliser la commande `rm -r`.
 
 
-### Commandes MinImportancePhotonSearchDistance
+### Commandes importantes
 
 1. Pour afficher l'heure, il faut entrer la commande `date`. `time` permet d'afficher le temps passé dans certains dossiers, et permet de voir les ressources utilisées.
 
@@ -103,3 +103,25 @@ Cela nous envoie alors dans la section dpkg-maintscript-helper, qui nous indique
 24. Grâce à la commande `locate history.log`, on trouve le chemin du fichier : /var/log/apt/history.log.bind
 
 25. Après avoir créé un fichier dans le répertoire personnel, la commande locate est incapable de le détecter.
+
+## 3 - Découverte de l'éditeur nano
+
+1. On copie le fichier avec la commande `cp /var/log/syslog log.txt`.
+
+2. A l'aide du raccourci clavier "Ctrl + \" on peut remplacer les termes recherchés.
+
+3. On se déplace sur les dernière lignes grâce au raccourci "Ctrl + _", puis on sélectionne le texte avec "Alt + A", puis on copie colle en se redéplaçant en haut du fichier.
+
+4. On annule les actions grâce au raccourci "Alt + U".
+
+5. On enregistre enfin puis quitte le fichier avec "Ctrl + O" puis "Ctrl + X".
+
+## 4 - Personnalisation du shell
+
+1. On entre la commande `cp ~/.bashrc .bashrc_bak`.
+
+2. On rentre ensuite dans le fichier copié pour décommenter une ligne.
+
+3. Après avoir modifié le fichier et rechargé le bash, l'invite de commandes passe en vert.
+
+4. Pour modifier les couleurs comme attendu, la ligne doit être "PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\A\[\033[01;30m\]] - \[\033[01;32m\]\u@\h\[\033[01;36m\]\w\[\033[30m\]\$'".
